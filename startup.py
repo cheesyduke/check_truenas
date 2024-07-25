@@ -1,4 +1,5 @@
 import logging
+import sys  # Add this line to import the sys module
 from request_handler import RequestHandler
 from checks.check_alerts import check_alerts
 from checks.check_repl import check_repl
