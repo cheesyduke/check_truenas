@@ -76,21 +76,5 @@ class Startup:
         # Implementation for handling different alert types
         pass
 
-# Example of setting up logging configuration
-if __name__ == "__main__":
-    logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-    # Load configuration from environment variables or a config file
-    hostname = os.getenv('HOSTNAME')
-    user = os.getenv('USER')
-    secret = os.getenv('SECRET')
-    use_ssl = os.getenv('USE_SSL', 'false').lower() == 'true'
-    verify_cert = os.getenv('VERIFY_CERT', 'true').lower() == 'true'
-    ignore_dismissed_alerts = os.getenv('IGNORE_DISMISSED_ALERTS', 'false').lower() == 'true'
-    debug_logging = os.getenv('DEBUG_LOGGING', 'false').lower() == 'true'
-    zpool_name = os.getenv('ZPOOL_NAME')
-    zpool_warn = int(os.getenv('ZPOOL_WARN', '80'))
-    zpool_critical = int(os.getenv('ZPOOL_CRITICAL', '90'))
-    show_zpool_perfdata = os.getenv('SHOW_ZPOOL_PERFDATA', 'false').lower() == 'true'
 
-    startup = Startup(hostname, user, secret, use_ssl, verify_cert, ignore_dismissed_alerts, debug_logging, zpool_name, zpool_warn, zpool_critical, show_zpool_perfdata)
 
